@@ -29,15 +29,15 @@ console.log(Math.floor(4.8))
 console.log(Math.min(4.9,3,4,90,1))
 console.log(Math.max(4.9,3,4,90.8,1))
 
-console.log(Math.random())//Math.random always gives value btw 0 to 1
+console.log(Math.random())//Math.random always gives value btw 0 to 1(0 included but not 1)
 
 console.log((Math.random()*10)+1)
 //so we multiply by 10 to make it one digit and +1 to ensure is not the outcome
 
 console.log(Math.floor(Math.random()*10)+1)//this will give floor value of the random number
 
-//but what if we want random value in btw min and max??
 
+//but what if we want random value in btw min and max??
 const min=10
 const max=20
 
