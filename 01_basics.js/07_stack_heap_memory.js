@@ -13,7 +13,7 @@ let userone={
     age:18
 }
 
-let usertwo=userone  //this will pass the address of userone obj to the usertwo obj
+let usertwo=userone  //this will pass the copy of reference of userone obj to the usertwo obj
 
 usertwo.email="ansh67@gmail.com" //this will change the value of userone.email also 
 
