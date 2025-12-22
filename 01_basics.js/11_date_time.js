@@ -46,5 +46,4 @@ console.log(newDate.getDay());//it will give day but in number..0-sunday,1-monda
 // })
 console.log(newDate.toLocaleString('default',{
     weekday:"long",
-    dateStyle:"medium"
 }))
