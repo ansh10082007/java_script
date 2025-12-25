@@ -13,12 +13,15 @@ function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
-handleObject(user)
+//u can call the function handleobject in both ways
+handleObject(user)//1st method by giving variable assigned to object
 handleObject({
     username:"sam",
     price:399,
-})
+})//2nd method by directly giving object
 
+
+//function and arrays
 const myNewArray=[200,400,100,600]
 function returnSecondValue(getArray){
     return getArray[1]
