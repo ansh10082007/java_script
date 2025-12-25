@@ -5,11 +5,23 @@ function calculateCardPrice(...num1){// this =>... operator is called rest opera
 console.log(calculateCardPrice(200,400,500))
 
 const user={
-    usrname:"Hitesh",
+    username:"Hitesh",
     price:199
 }
 
-// function handleObject(anyobject){
-//     console.log(`Username is ${} and price is ${}`);
-    
-// }
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+handleObject(user)
+handleObject({
+    username:"sam",
+    price:399,
+})
+
+const myNewArray=[200,400,100,600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200,400,100,600]));
