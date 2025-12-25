@@ -19,13 +19,17 @@ console.log("Result: ",result);
 function add1(number1,number2){
     console.log(number1+number2);
     return number1+number2
-    console.log("ansh")//this will not be executed cause after return statement the function stops 
+    console.log("ansh")//this will not be executed cause after return statement executes,it always exits the entire function 
 }
 const result1=add1(4,5);
 console.log("Result: ",result1);
 
-function loginUsername(name){
-    return `${name} just logged in`
+function loginUsername(username){
+    if(!username){
+        console.log("Please enter a username: ")
+        return
+    }
+    return `${username} just logged in`
 }
 console.log(loginUsername("Ansh"))
 
