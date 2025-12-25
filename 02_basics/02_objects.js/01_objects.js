@@ -14,8 +14,10 @@ const user1={
     lastloginfDays:["Monday","Saturday"]
 }
 
+//below both methods can be used
 console.log(user1.email)
 console.log(user1["email"])
+
 console.log(user1["full name"])//we cannot call the key having space by the dot method
 console.log(user1[mySym])
 

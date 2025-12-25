@@ -16,8 +16,8 @@ str3=str1+str2
 console.log(str3);
 
 
-console.log("1"+2)
-console.log(1+"2")
+console.log("1"+2)    //the 2 will be automatically convertedd to string
+console.log(1+"2")    //the 1 will be automatically converted to string
 console.log("1"+2+2)  //if string first then all the things in the parathesis will be treated as strings
 console.log(1+2+"2")  //if string after int thn int will be treated as int and the string will be treated as string
 
