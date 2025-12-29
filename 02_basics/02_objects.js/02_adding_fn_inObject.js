@@ -1,3 +1,5 @@
+//adding functions in objects
+
 const user1={
     name:"Hitesh",
     age:18,
