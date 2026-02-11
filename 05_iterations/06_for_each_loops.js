@@ -28,6 +28,8 @@ coding.forEach( (item,index,arr)=>{
     console.log(item,index,arr);
 })
 
+//we can use forEach for nodelist but not for HTML collection!!
+
 
 //if u have to skip the parameters u can write anything at the place of that parameters but different 
 //But u cannot write forEach((,,arr))=>{}

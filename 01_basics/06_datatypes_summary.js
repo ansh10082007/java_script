@@ -1,6 +1,6 @@
 // ==== Primitive=========
 
-//  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+//  7 types : String, Number, Boolean, null, undefined, Symbol, BigInt
 
 //number (int ,float are treated same no need to specify float)
 const score = 100

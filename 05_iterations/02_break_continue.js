@@ -1,7 +1,7 @@
 // break and continue
 
 /*
-for(let index =1; index<=20; index++){
+for(let index = 1; index<=20; index++){
     if(index==5){
         console.log(`Detected 5`);
         break;      //it stops the whole loop if it is executed

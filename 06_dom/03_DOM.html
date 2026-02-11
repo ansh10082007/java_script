@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body>
+    <ul class ="language">
+        <li>Javascript</li>
+    </ul>  
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+
+        //to append to document both methods are correct: 
+
+        //document.querySelector('.language').appendChild(li)
+
+        const list = document.querySelector(".language")
+        list.appendChild(li)  
+        //this one is cleaner!!
+    }
+    addLanguage("python")
+    addLanguage("c++")
+
+    //more optimized and common way
+    function addLanguage1(langName){
+        const li = document.createElement('li');
+        // li.appendChild(document.createTextNode(langName))
+        li.textContent = `${langName}`    //this method is very common than appendChild
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLanguage1("rust")
+
+    //Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //querySelector = follows CSS & CSS rules apply strictly 
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+    
+</script>
+</html>
