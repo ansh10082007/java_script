@@ -1,0 +1,26 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;        /*vertical centering*/
+    justify-content: center;    /*horizontal centering*/
+    height: 100vh;              /*makes body take full viewport height (100% of screen)*/
+    background-color: black;
+    color:white;
+}
+
+.result{
+    font-size:25px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(230, 145, 49);
+    color: rgb(22, 3, 3);
+    padding:30px;
+    margin-top: 10px;
+    border-radius: 100px;
+}
