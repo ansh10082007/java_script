@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        console.log("ansh")
+    },5000)  //setTimeout(function, delay_in_milliseconds);  runs a function after waiting for specific time
+
+    const changeText= function(){
+        document.querySelector('h1').innerHTML="best js series"
+    }
+    
+    const changeMe = setTimeout(changeText,2000)   //1st method
+    /* const changeMe = setTimeout(()=>{
+        changeText("we can pass parameter here ")
+    },5000)
+     or
+    const changeMe = setTimeout(function(){
+        changeText("we can pass parameter here ")
+    },5000)
+    //parameter passing happens by this method only we cant do it by 1st method
+    //means we have to pass function in setTimeout which will call our real function
+
+
+    //if we do this in 1st method:
+    setTimeout(changeText(" "),3000)   //changeText(" ") it immmediately executes the function so the function soes not runs after the delayed time mentioned 
+    //when we pass changeText() , the function here is executed first and then whatever it return is passed to setTimeout,
+    // i.e here setTimeout will get undefined as our function is not returning anything.
+    */
+
+    
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("change stopped");
+    })
+
+
+</script>
+</html>

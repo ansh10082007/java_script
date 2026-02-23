@@ -15,18 +15,35 @@
     </ul>
 
 </body>
-<script src="02_events_infor.js"></script>
 <script>
     /*document.getElementById('owl').onclick = function(){
         alert("owl clicked");
     }*/         //this is old method and has flaws dont use on clicked
 
+
     //addEventListener() is modern,best and has more features for now!!
     document.getElementById('owl').addEventListener('click',function(){
         alert("owl clicked");
+        console.log("owl clicked after true phase");
     },false/*false is default value in addEventListener so its optional to add false*/)
 
+    //observe case 1(false) and case 2(true) in console of the site
+    document.getElementById("images").addEventListener('click',function(e){
+        console.log("clicked inside the ul by false");
+    },false)
+    document.getElementById("owl").addEventListener('click',function(e){
+        console.log("owl clicked by false");
+    },false)
+    //case 2:
+    document.getElementById("images").addEventListener('click',function(e){
+        console.log("clicked inside the ul by true ");
+    },true)
+    document.getElementById("owl").addEventListener('click',function(e){
+        console.log("owl clicked by true");
+    },true)
 
+
+    
     // other methods used to add event:[old ones now dont use them]
     //attachEvent()  
     //In jQuery ->  on
@@ -36,22 +53,6 @@
     //target,toElement,srceElement,currentTarget
     //clientX,clientY,screenX,screenY
     //altKey,ctrlKey,shiftKey,keyCode
-    
-    //observe case 1(false) and case 2(true) in console of the site
-    document.getElementById("images").addEventListener('click',function(e){
-        console.log("clicked inside the ul");
-    },false)
-    document.getElementById("owl").addEventListener('click',function(e){
-        console.log("owl clicked");
-    },false)
-    //case 2:
-    document.getElementById("images").addEventListener('click',function(e){
-        console.log("clicked inside the ul");
-    },true)
-    document.getElementById("owl").addEventListener('click',function(e){
-        console.log("owl clicked");
-    },true)
-
 
     document.getElementById("images").addEventListener('click',function(e){
         console.log(e.target.parentNode);

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur JS</h1>
+    <div id = "content"></div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+//setInterval() is same as setTimeout() 
+//just diff is setInterval runs again and again after specific time and setTimeout runs only once
+    const sayDate = function(str){
+        const date = new Date();
+        const content = document.querySelector("#content")
+        const newElement = document.createElement("p")
+        newElement.textContent = `${str} , ${date.toDateString()}`;
+        content.appendChild(newElement);
+    }
+
+    const start = document.getElementById("start")
+    const stopIt = document.getElementById("stop")
+
+    let intervalId = null;
+
+    start.addEventListener('click',function(){
+        if(intervalId != null){
+            return;
+        }
+        intervalId = setInterval(function(){
+            sayDate("Ansh")
+        },1000,"hi") 
+    })
+
+    stopIt.addEventListener('click',function(){
+        clearInterval(intervalId);
+        intervalId = null;
+    })
+
+    
+    /*
+    const intervalId = setInterval(()=>{
+        sayDate("Ansh")
+    },1000,"hi")  
+    //both do the same work
+    */  
+</script>
+</html>
