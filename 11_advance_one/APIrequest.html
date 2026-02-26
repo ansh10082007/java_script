@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Username:<small><span id="name"></span></small></h1>
+    <div id="followers">Followers: </div>
+
+
+</body>
+<script>
+    const xhr = new XMLHttpRequest();
+    const requestUrl = 'https://api.github.com/users/ansh10082007'
+    xhr.open('GET',requestUrl)
+
+    xhr.onload = function() {
+        if(xhr.status === 200){
+            const data = JSON.parse(xhr.responseText);
+
+            // console.log(data);
+            
+            document.querySelector("#name").append(data.login)
+
+        }
+        else{
+            console.log("Request failed. Status:",xhr.status);
+            
+        }
+    };
+
+    xhr.onerror = function(){
+        console.log("Network error occureed");        
+    }
+
+    xhr.send();
+</script>
+</html>
