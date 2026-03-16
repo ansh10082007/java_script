@@ -1,0 +1,87 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Main Container Styling */
+body > div, body {
+    text-align: center;
+}
+
+/* Container for the content */
+body {
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-size: 2.5rem;
+}
+
+/* Controls Section */
+select, button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin: 5px;
+}
+
+select {
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: #4A90E2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Results Card */
+div {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    min-width: 300px;
+}
+
+h3 {
+    margin: 15px 0;
+    font-weight: 500;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+span {
+    font-weight: bold;
+    color: #222;
+}
